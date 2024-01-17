@@ -12,7 +12,7 @@ html {
 
 .badge {
   position: absolute;
-  right: 1rem;
+  right: 0.5rem;
   top: 1rem;
   padding: 0.5rem;
   border-radius: 0.25rem;
@@ -87,6 +87,12 @@ body {
 @media screen and (min-width: 992px) {
   .badge {
     position: fixed;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .uptown {
+    margin-top: 3rem;
   }
 }
 
