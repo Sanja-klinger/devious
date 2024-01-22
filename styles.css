@@ -27,6 +27,9 @@ html {
   }
 }
 
+/*  Add a gradient in the site header of your cv
+ Please ensure readability of your text and links within the header */
+
 .uptown {
   display: flex;
   justify-content: space-around;
@@ -36,6 +39,11 @@ html {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  border-style: inset;
+  border-color: #eb9b0f;
+  border-radius: 100px 100px 100px 100px;
+  transform: rotate(2deg);
+  background: radial-gradient(closest-side, transparent 5%, #97b415, #175e0d);
 }
 
 .main-heading {
@@ -182,4 +190,12 @@ body {
     align-items: baseline;
     justify-content: space-between;
   }
+}
+
+/*  Add a footer to your cv
+ Add a text to the footer, i.e. "Did you like my CV? Contact me"
+ Give the footer a background color or a gradient */
+.downtown {
+  font-size: small;
+  background: radial-gradient(closest-side, #c6d8c6, hsl(202, 35%, 72%));
 }
