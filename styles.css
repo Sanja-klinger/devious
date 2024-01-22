@@ -27,10 +27,28 @@ html {
   }
 }
 
-/*  Add a gradient in the site header of your cv
- Please ensure readability of your text and links within the header */
+.header::before,
+.header::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 50px solid greenyellow;
+}
 
-.uptown {
+.header::before {
+  left: -5%; /* Adjust the distance of the left triangle */
+  transform: rotate(90deg);
+}
+
+.header::after {
+  right: -5%; /* Adjust the distance of the right triangle */
+  transform: rotate(45deg);
+}
+
+.header {
   display: flex;
   justify-content: space-around;
   flex-direction: row;
@@ -44,10 +62,31 @@ html {
   border-radius: 100px 100px 100px 100px;
   transform: rotate(2deg);
   background: radial-gradient(closest-side, transparent 5%, #97b415, #175e0d);
+  position: relative;
+  margin-left: 5%;
+  margin: right 5%;
+  margin: top 5%;
+}
+
+.uptown {
+  display: flex;
+  flex-direction: row; /* Adjust to column layout */
+}
+
+.main-heading {
+  margin: 0; /* Reset margin for the h1 element */
+}
+
+.triangle {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .main-heading {
   font-size: 1em;
+  margin: 0; /* Reset margin for the h1 element */
 }
 
 .profession {
@@ -79,17 +118,6 @@ body {
 
 *::selection {
   background-color: plum;
-}
-
-/**************************************************************/
-/* Specific Stylings */
-
-.header {
-  padding: 3rem 1rem;
-  padding-top: 4.5rem;
-  text-align: center;
-  background-color: #eee;
-  position: relative;
 }
 
 @media screen and (min-width: 992px) {
