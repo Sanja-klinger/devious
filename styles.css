@@ -37,15 +37,17 @@ html {
   height: 0;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
-  border-bottom: 50px solid #d77a10;
+  border-bottom: 50px solid hsl(16, 76%, 21%);
   border-radius: 10px 10px 0px 0px;
 }
 
 .header::before {
-  left: -5%; /* Adjust the distance of the left triangle */
+  left: -50px; /* Adjust the distance of the left triangle */
   transform: rotate(90deg);
+  bottom: 50px;
   margin-left: 0;
   margin-top: 5%;
+  z-index: -1;
 }
 
 .header::after {
@@ -55,9 +57,7 @@ html {
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
+  padding-inline: 2rem;
   font-size: 2rem;
   font-family: "Dancing Script", cursive;
   font-optical-sizing: auto;
@@ -67,12 +67,7 @@ html {
   border-color: #eb9b0f;
   border-radius: 100px 100px 100px 100px;
   transform: rotate(2deg);
-  background: radial-gradient(
-    closest-side,
-    transparent 5%,
-    #d68a1f,
-    hsl(16, 76%, 21%)
-  );
+  background: radial-gradient(closest-side, #d68a1f, hsl(16, 76%, 21%));
   position: relative;
   margin-left: 5%;
   margin: right 5%;
