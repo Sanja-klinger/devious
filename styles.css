@@ -10,6 +10,15 @@ html {
   font-family: cursive;
 }
 
+body {
+  --background-color: lightgray;
+  --accent-color: hsl(16, 76%, 21%);
+  --accent-color2: #eb9b0f;
+
+  background-color: var(--background-color);
+  z-index: 1;
+}
+
 .badge {
   position: absolute;
   right: 0.5rem;
@@ -17,7 +26,7 @@ html {
   padding: 0.5rem;
   border-radius: 0.25rem;
   transform: rotate(20deg);
-  background: #eb9b0f;
+  background: var(--accent-color2);
   color: black;
 }
 
@@ -25,6 +34,30 @@ html {
   html {
     font-size: 18px;
   }
+}
+
+.header {
+  z-index: 2;
+
+  padding-inline: 2rem;
+  font-size: 2rem;
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  border-style: inset;
+  border-color: var(--accent-color2);
+  border-radius: 100px 100px 100px 100px;
+  transform: rotate(2deg);
+  background-color: radial-gradient(
+    closest-side,
+    (--accent-color),
+    var(--accent-color2)
+  );
+  position: relative;
+  margin-left: 5%;
+  margin: right 5%;
+  margin: top 5%;
 }
 
 /* works (kinda) for a smaller screen, loses form in bigger. no sausage form reached yet, pray for ascension */
@@ -37,7 +70,7 @@ html {
   height: 0;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
-  border-bottom: 50px solid hsl(16, 76%, 21%);
+  border-bottom: 50px solid var(--accent-color);
   border-radius: 10px 10px 0px 0px;
 }
 
@@ -54,24 +87,7 @@ html {
   right: -5%; /* Adjust the distance of the right triangle */
   transform: rotate(270deg);
   margin-top: 6%;
-}
-
-.header {
-  padding-inline: 2rem;
-  font-size: 2rem;
-  font-family: "Dancing Script", cursive;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  border-style: inset;
-  border-color: #eb9b0f;
-  border-radius: 100px 100px 100px 100px;
-  transform: rotate(2deg);
-  background: radial-gradient(closest-side, #d68a1f, hsl(16, 76%, 21%));
-  position: relative;
-  margin-left: 5%;
-  margin: right 5%;
-  margin: top 5%;
+  bottom: 50px;
 }
 
 .uptown {
@@ -121,10 +137,6 @@ h6 {
 
 body {
   margin: 0;
-}
-
-*::selection {
-  background-color: plum;
 }
 
 @media screen and (min-width: 992px) {
@@ -231,6 +243,7 @@ body {
  Add a text to the footer, i.e. "Did you like my CV? Contact me"
  Give the footer a background color or a gradient */
 .downtown {
+  z-index: 2;
   font-size: small;
   background: radial-gradient(closest-side, #c6d8c6, hsl(202, 35%, 72%));
 }
