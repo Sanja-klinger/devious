@@ -8,7 +8,7 @@
 html {
   font-size: 16px;
   font-family: cursive;
-  --background-color: lightgray;
+  --background-color: rgb(217, 198, 151);
   --accent-color: hsl(16, 76%, 21%);
   --accent-color2: #eb9b0f;
 }
@@ -34,13 +34,15 @@ body {
   }
 }
 
+/* linear gradient needs height? */
+
 .header {
-  height: 200px;
+  height: 150px;
   padding-inline: 2rem;
   font-size: 2rem;
   font-family: "Dancing Script", cursive;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
   border-style: inset;
   border-color: var(--accent-color2);
