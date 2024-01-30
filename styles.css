@@ -19,13 +19,13 @@ body {
 
 .badge {
   position: absolute;
-  right: 1rem;
+  left: 5rem;
   top: 1rem;
-  padding: 2.5rem;
+  padding: 2rem;
   border-radius: 0.25rem;
   opacity: 1;
-  background: var(--accent-color2);
-  color: black;
+  background: var(--accent-color);
+  color: white;
   transform-origin: top right;
   transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
   transform: rotate(15deg);
@@ -49,9 +49,9 @@ body {
 .header {
   position: static;
   margin-left: 5%;
-  margin: right 5%;
-  margin: top 5%;
-  padding-inline: 1rem;
+  margin-right: 5%;
+  margin-top 5%;
+  padding-inline: 0.5rem;
   font-size: 2rem;
   font-family: "Dancing Script", cursive;
   font-optical-sizing: auto;
@@ -88,17 +88,16 @@ body {
 .header::before {
   left: -30px;
   transform: rotate(90deg);
-  bottom: 50px;
-  margin-left: 0;
-  margin-top: 5%;
+  margin-left: 5%;
+  margin-top: 10%;
   z-index: -1;
 }
 
 .header::after {
-  right: -3%; /* Adjust the distance of the right triangle */
+  right: 0.2%; /* Adjust the distance of the right triangle */
   transform: rotate(270deg);
-  margin-top: 6%;
-  bottom: 50px;
+  z-index:-1;
+  margin-top: -15%;
 }
 
 .uptown {
