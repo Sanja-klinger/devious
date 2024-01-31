@@ -15,42 +15,23 @@ html {
 
 body {
   background-color: var(--background-color);
+  position: relative;
 }
-
-.badge {
-  position: absolute;
-  left: 5rem;
-  top: 1rem;
-  padding: 2rem;
-  border-radius: 0.25rem;
-  opacity: 1;
-  background: var(--accent-color);
-  color: white;
-  transform-origin: top right;
-  transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
-  transform: rotate(15deg);
-}
-
-.badge span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(-15deg);
-}
-
-@media screen and (min-width: 768px) {
-  html {
-    font-size: 18px;
-  }
-}
-
-/* linear gradient needs height? */
 
 .header {
+  position: relative;
+  background-color: beige;
+}
+
+.sausage {
   position: static;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: -1;
   margin-left: 5%;
   margin-right: 5%;
-  margin-top 5%;
   padding-inline: 0.5rem;
   font-size: 2rem;
   font-family: "Dancing Script", cursive;
@@ -68,53 +49,77 @@ body {
   );
 }
 
-.header:hover .badge,
-.header:focus-within .badge {
-  opacity: 1;
-  transform: scale(2);
+.sausage h1 {
+  margin: 0;
 }
 
-.header::before,
-.header::after {
-  content: "";
+.vorne {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 30px solid var(--accent-color2);
+  transform: rotate(90deg);
+  left: 0.1px;
+  top: 2.5rem;
+}
+
+.hinten {
   position: absolute;
   width: 0;
   height: 0;
   border-left: 30px solid transparent;
   border-right: 30px solid transparent;
   border-bottom: 30px solid var(--accent-color);
-}
-
-.header::before {
-  left: -30px;
-  transform: rotate(90deg);
-  margin-left: 5%;
-  margin-top: 10%;
-  z-index: -1;
-}
-
-.header::after {
-  right: 0.2%; /* Adjust the distance of the right triangle */
+  right: -7px;
+  top: 2.5rem;
   transform: rotate(270deg);
-  z-index:-1;
-  margin-top: -15%;
 }
 
-.uptown {
+.navigation {
+  position: static;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between; /* Adjust to column layout */
+  flex-direction: column;
+  align-items: center;
+}
+
+.badge {
+  position: absolute;
+  left: 5rem;
+  top: 5rem;
+  padding: 2rem;
+  border-radius: 0.25rem;
+  opacity: 1;
+  background: var(--accent-color);
+  color: white;
+  transform-origin: top right;
+  /*transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;*/
+  transition-timing-function: cubic-bezier(0, 1.36, 1, -0.6);
+  transform: rotate(15deg);
+}
+
+.badge span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-15deg);
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+.header:hover .badge,
+.header:focus-within .badge {
+  opacity: 1;
+  transform: scale(2);
 }
 
 .main-heading {
   margin: 0; /* Reset margin for the h1 element */
-}
-
-.triangle {
-  position: relative;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
 }
 
 .main-heading {
@@ -124,10 +129,6 @@ body {
 
 .profession {
   font-size: 1em;
-}
-
-.uptown h1 {
-  margin: 0;
 }
 
 @media screen and (min-width: 992px) {
@@ -169,12 +170,6 @@ body {
   .navigation {
     display: none;
   }
-}
-
-.navigation {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -226,17 +221,8 @@ body {
   }
 }
 
-.main > * {
-  border-top: 0.125rem solid grey;
-  padding: 0 1rem;
-}
-
-.main > *:first-child {
-  border-top: none;
-}
-
 .article-heading {
-  position: relative;
+  position: static;
   left: -1rem;
 }
 
