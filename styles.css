@@ -26,7 +26,6 @@ body {
 
 .sausage {
   position: static;
-
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -56,26 +55,26 @@ body {
 
 .vorne {
   position: absolute;
-  width: 0;
   height: 0;
-  border-left: 30px solid transparent;
-  border-right: 30px solid transparent;
-  border-bottom: 30px solid var(--accent-color2);
-  transform: rotate(90deg);
-  left: 0.1px;
+  width: 50px;
+  border-bottom: 35px solid var(--accent-color);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  transform: rotate(85deg);
+  left: -0.7px;
   top: 2.5rem;
 }
 
 .hinten {
   position: absolute;
-  width: 0;
   height: 0;
-  border-left: 30px solid transparent;
-  border-right: 30px solid transparent;
-  border-bottom: 30px solid var(--accent-color);
+  width: 50px;
+  border-bottom: 35px solid var(--accent-color);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
   right: -7px;
   top: 2.5rem;
-  transform: rotate(270deg);
+  transform: rotate(275deg);
 }
 
 .navigation {
