@@ -300,3 +300,29 @@ body {
   border: var(--accent-color) solid;
   margin: 0px;
 }
+
+section .grid {
+  font-family: sans-serif;
+  
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+}
+article .grid {
+  background-color: dodgerblue;
+  padding-inline: 10px;
+}
+.tall {
+  grid-area: 1 / 4 / span 2 / span 1;
+ }
+
+.wide1 {
+  grid-area: 1 / 1 / span 1 / span 2;
+}
+.wide1 {
+  grid-area: 1 1 1 / span 2;
+}
+.wide2 {
+  grid-area: 2 / 2 / 2 / span 2;
+}
