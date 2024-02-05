@@ -276,3 +276,7 @@ body {
     grid-template-columns: 1fr 2.5fr;
   }
 }
+.container-lyrics {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
