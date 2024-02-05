@@ -279,4 +279,24 @@ body {
 .container-lyrics {
   display: grid;
   grid-template-columns: 3fr 1fr;
+  border: black solid;
+  grid-gap: 10px;
+}
+
+.upper-left-lyrics {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  border: blue solid;
+  grid-gap: 10px;
+}
+
+.lower-left-lyrics {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  border: red solid;
+}
+
+.lyrics {
+  border: var(--accent-color) solid;
+  margin: 0px;
 }
