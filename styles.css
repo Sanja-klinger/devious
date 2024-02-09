@@ -396,3 +396,105 @@ section.grid {
 .wide {
   grid-column: span 2;
 }
+
+/*Aufgabe 6.2.2024*/
+
+.tourism {
+  --clr-accent: darkslateblue;
+  --clr-accent2: darkorange;
+  --clr-white: white;
+  --s-base: 1rem;
+  --s-base-xl: calc(var(--s-base) 2);
+  --s-base-small: calc(var(--s-base) / 2);
+  --s-base-smaller: calc(var(--s-base) / 3);
+  --s-border: 0.125rem;
+  --s-radius-outer: 0.75rem;
+  --s-radius-inner: calc(var(--s-radius-outer) / 3);
+
+  font-family: sans-serif;
+  display: flex;
+  gap: var(--s-base);
+}
+
+.violet {
+  max-width: 400px;
+  border: black solid var(--s-border);
+  border-radius: var(--s-radius-outer);
+  box-shadow: var(--clr-accent) 5px 5px 1px;
+  padding: var(--s-base);
+}
+
+.orange {
+  max-width: 400px;
+  border: black solid var(--s-border);
+  border-radius: var(--s-radius-outer);
+  box-shadow: var(--clr-accent2) 5px 5px 1px;
+  padding: var(--s-base);
+}
+
+.landscape {
+  max-width: 360px;
+  min-width: 270px;
+  max-height: 130px;
+  overflow: hidden;
+  border-radius: var(--s-radius-inner);
+}
+
+.date-author {
+  display: flex;
+  justify-content: space-between;
+  font-size: calc(var(--s-base) / 3);
+  color: gray;
+}
+
+.photo-author-orange {
+  border-radius: 50%;
+  width: var(--s-base);
+  height: var(--s-base);
+  align-self: center;
+  border: var(--accent-color2) solid var(--s-border);
+}
+
+.photo-author-violet {
+  border-radius: 50%;
+  width: var(--s-base);
+  height: var(--s-base);
+  align-self: center;
+  border: var(--accent-color) solid var(--s-border);
+}
+
+.author-photo-name {
+  display: flex;
+  align-items: flex-end;
+}
+
+.reisen-button {
+  background-color: hsl(187, 81%, 52%);
+  border-radius: 100px 100px 100px 100px;
+  display: inline;
+  font-size: var(--s-base-smaller);
+  padding-left: var(--s-base-smaller);
+  padding-right: var(--s-base-smaller);
+}
+
+.lifestyle-orange {
+  display: flex;
+  gap: 0.5px;
+}
+
+.button-violet {
+  background-color: var(--clr-accent);
+  padding: var(--s-base-small);
+  display: inline;
+  border-radius: 10px 10px 10px 10px;
+  color: white;
+}
+
+.button-orange {
+  background-color: var(--clr-accent2);
+  padding: var(--s-base-small);
+  display: inline;
+  border-radius: 10px 10px 10px 10px;
+  color: white;
+  font: 1em sans-serif;
+}
